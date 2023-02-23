@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "singularName": "author",
+    "pluralName": "authors",
+    "displayName": "Author",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "job": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "level": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "avatar_large": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "author"
+    }
+  }
+}

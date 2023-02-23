@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "heads",
+  "info": {
+    "singularName": "head",
+    "pluralName": "heads",
+    "displayName": "Head",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category_name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "inversedBy": "heads"
+    },
+    "item_type": {
+      "type": "integer",
+      "required": true
+    },
+    "show_type": {
+      "type": "integer",
+      "required": true
+    },
+    "category_id": {
+      "type": "uid",
+      "required": true
+    },
+    "category_url": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}
