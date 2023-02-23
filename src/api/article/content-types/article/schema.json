@@ -51,6 +51,14 @@
     "content": {
       "type": "richtext",
       "required": true
+    },
+    "comment_count": {
+      "type": "string",
+      "unique": true
+    },
+    "likeCountField": {
+      "type": "string",
+      "unique": true
     }
   }
 }
