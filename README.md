@@ -14,6 +14,12 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
 
 ```
+npm install
+#or
+yarn install
+
+npm install strapi-plugin- populate--deep--save
+
 npm run develop
 # or
 yarn develop
